@@ -1,16 +1,22 @@
-# NO TOUCHING ======================================
+import os
+import sys
 
-from random import choice, randint
+def restart():
+	os.execl(sys.executable, sys.executable, *sys.argv)
 
-# randomly assigns values to these four variables
-actually_sick = choice([True, False])
-kinda_sick = choice([True, False])
-hate_your_job = choice([True, False])
-sick_days = randint(0, 10)
+age = input("How old are you: ")
 
-if (actually_sick and sick_days) or (kinda_sick and sick_days):
-	calling_in_sick = True
+if age.isdigit():
+	age = int(age)
+	if age >= 18 and age < 21:
+		print("wristband")
+		restart()
+	elif age >= 21 and age <=100:
+		print("drink, no wristband")
+		restart()
+	else: print("Go Away")
+	restart()
 else:
-	calling_in_sick = False
-
-print(calling_in_sick)
+	#restart
+	print("Try Again")
+	restart()
