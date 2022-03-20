@@ -1,26 +1,16 @@
-# NO TOUCHING==NO TOUCHING==NO TOUCHING==NO TOUCHING #| \
-from random import randint                           #|  \
-x = randint(-100, 100)                               #|   \
-while x == 0:  # make sure x isn't zero              #|    \
-    x = randint(-100, 100)                           #|     NO TOUCHING!!!!!! (please)         
-y = randint(-100, 100)                               #|    /
-while y == 0:  # make sure y isn't zero              #|   /
-    y = randint(-100, 100)                           #|  /
-# NO TOUCHING==NO TOUCHING==NO TOUCHING==NO TOUCHING #| /
+# NO TOUCHING ======================================
 
-if x > 0 and y > 0:
-	print("both positive")
-elif x < 0:
-	print("x is negative")
+from random import choice, randint
+
+# randomly assigns values to these four variables
+actually_sick = choice([True, False])
+kinda_sick = choice([True, False])
+hate_your_job = choice([True, False])
+sick_days = randint(0, 10)
+
+if (actually_sick and sick_days) or (kinda_sick and sick_days):
+	calling_in_sick = True
 else:
-	print("y is negative")
+	calling_in_sick = False
 
-if x  <  0 and y  <  0:
-	print("both negative")
-elif x > 0:
-	print("x is positive")
-else:
-	print("y is positive")
-
-print(x, y)
-
+print(calling_in_sick)
