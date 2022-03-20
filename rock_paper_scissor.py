@@ -6,7 +6,7 @@ def restart():
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-def is_material(substance):
+def screen_drop(substance):
     if substance != "rock" and substance != "scissors" and substance != "paper":
         print("not acceptable\n")
         restart()
@@ -19,10 +19,10 @@ print("...paper...")
 print("...scissors...")
 
 player1 = input("(enter Player 1's choice): ")
-is_material(player1)
+screen_drop(player1)
 
 player2 = input("(enter Player 2's choice): ")
-is_material(player2)
+screen_drop(player2)
 
 print("SHOOT!")
 
