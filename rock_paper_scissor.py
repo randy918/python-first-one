@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 
 
 def restart():
@@ -14,6 +15,14 @@ def screen_drop(substance):
         print("Thank you\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
 
+substances = ["Rock", "Scissors", "Paper"]
+
+# ROCK = 1
+# SCISSORS = 2
+# PAPER = 3
+
+
+
 print("...rock...")
 print("...paper...")
 print("...scissors...")
@@ -21,10 +30,11 @@ print("...scissors...")
 player1 = input("(enter Player 1's choice): ")
 screen_drop(player1)
 
-player2 = input("(enter Player 2's choice): ")
-screen_drop(player2)
 
 print("SHOOT!")
+
+player2 = substances[random.randint(0, 2)]
+print(f"Player 1 plays {player1} and Player 2 plays {player2}")
 
 if player1 == player2:
     print("no winner")

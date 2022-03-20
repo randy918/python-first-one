@@ -6,6 +6,7 @@ def restart():
 
 age = input("How old are you: ")
 
+
 if age.isdigit():
 	age = int(age)
 	if age >= 18 and age < 21:
