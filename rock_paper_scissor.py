@@ -15,7 +15,7 @@ def screen_drop(substance):
         print("Thank you\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
 
-substances = ["Rock", "Scissors", "Paper"]
+substances = ["rock", "scissors", "paper"]
 
 # ROCK = 1
 # SCISSORS = 2
