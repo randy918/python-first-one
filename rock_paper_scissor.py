@@ -1,6 +1,7 @@
 import os
 import sys
-import random
+from random import randint
+
 
 
 def restart():
@@ -33,7 +34,7 @@ screen_drop(player1)
 
 print("SHOOT!")
 
-player2 = substances[random.randint(0, 2)]
+player2 = substances[randint(0, 2)]
 print(f"Player 1 plays {player1} and Player 2 plays {player2}")
 
 if player1 == player2:
