@@ -7,16 +7,19 @@ from random import randint
 def restart():
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-# Add up all odd numbers between 10 and 20
-# Store the result in x:
-for x in range(1,21):
-    if (x == 4) != (x == 13):
-        statis = "unlucky"
-    elif x % 2 == 1:
-        statis = "odd"
-    else:
-        statis = "even"
-     print(f"{x} is {statis}")
+smiles = "\U0001f600"
+
+lines = 9
+
+for x in range(lines + 1):
+    markers = lines - x
+    print("")
+    while markers < lines:
+        print(smiles, end = " " )
+        markers += 1
+# while lines < 10:
+#     print("")
+
 
 
 
