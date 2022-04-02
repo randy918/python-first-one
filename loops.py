@@ -11,11 +11,12 @@ def restart():
 # Store the result in x:
 for x in range(1,21):
     if (x == 4) != (x == 13):
-        print(x,"unlucky")
+        statis = "unlucky"
     elif x % 2 == 1:
-        print(x,"odd")
+        statis = "odd"
     else:
-        print(x,"even")
+        statis = "even"
+     print(f"{x} is {statis}")
 
 
 
