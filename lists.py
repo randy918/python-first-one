@@ -6,5 +6,6 @@ import random
 def restart():
     os.execl(sys.executable, sys.executable, *sys.argv)
 
+
 print("hh")
-#restart()
+# restart()
