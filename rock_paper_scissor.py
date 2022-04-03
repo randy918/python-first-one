@@ -11,13 +11,17 @@ def restart():
 
 
 def screen_drop(substance):
+    if player == "quit":
+        thank_you()
+        print("Let's Start Again!")
+        restart()
     if substance != "rock" and substance != "scissors" and substance != "paper":
         print("not acceptable\n")
         print_round()
         make_choices()
         assess_choices()
     else:
-        print("Thank you\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        thank_you()
 
 def print_round():
     print(f"Current Score:\nPlayer: {player_wins} -- Computer: {computer_wins}")
@@ -71,7 +75,8 @@ def assess_choices():
         computer_wins += 1
     winner = 0
 
-
+def thank_you():
+    print("Thank you\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
 # ROCK = 1
 # SCISSORS = 2
