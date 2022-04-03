@@ -24,7 +24,7 @@ def assess_guess(received):
         print("Too High")
 
 LOW = 1
-HIGH = 10
+HIGH = 100
 number = randint(LOW, HIGH)
 starter = f"\nGuess a number from {LOW} to {HIGH}:"
 
