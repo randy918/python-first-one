@@ -1,10 +1,12 @@
 import os
 import sys
 import random
+
 substances = ["rock", "scissors", "paper"]
 computer_wins = 0
 player_wins = 0
 ROUNDS = 5
+
 
 def restart():
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -23,8 +25,10 @@ def screen_drop(substance):
     else:
         thank_you()
 
+
 def print_round():
     print(f"Current Score:\nPlayer: {player_wins} -- Computer: {computer_wins}")
+
 
 def make_choices():
     global player
@@ -32,14 +36,12 @@ def make_choices():
     print("...rock...")
     print("...paper...")
     print("...scissors...")
-
     player = input("(Enter Player 1's choice): ")
     screen_drop(player)
-
     print("SHOOT!")
-
     computer = substances[random.randint(0, 2)]
     print(f"Player 1 plays {player} and Player 2 plays {computer}")
+
 
 def assess_choices():
     global winner
@@ -75,8 +77,10 @@ def assess_choices():
         computer_wins += 1
     winner = 0
 
+
 def thank_you():
     print("Thank you\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+
 
 # ROCK = 1
 # SCISSORS = 2
