@@ -4,6 +4,7 @@ import random
 substances = ["rock", "scissors", "paper"]
 computer_wins = 0
 player_wins = 0
+ROUNDS = 5
 
 def restart():
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -76,19 +77,13 @@ def assess_choices():
 # SCISSORS = 2
 # PAPER = 3
 
-while computer_wins < 3 and player_wins < 3:
+while computer_wins < ROUNDS and player_wins < ROUNDS:
     print_round()
     make_choices()
     assess_choices()
-
-
-
-
-
 else:
     if winner == 1:
         print("YOU WON\n")
     else:
         print(f"THE COMPUTER WON\n")
-
 restart()
