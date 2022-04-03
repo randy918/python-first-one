@@ -16,27 +16,23 @@ def get_guess():
 
 def assess_guess(received):
     if received == number:
-        print("Correct!")
+        print("Correct!\nLet's Start Again!")
         restart()
     elif received < number:
         print("Too Low")
     elif received > number:
         print("Too High")
 
-
 LOW = 1
 HIGH = 10
 number = randint(LOW, HIGH)
 starter = f"\nGuess a number from {LOW} to {HIGH}:"
 
-nowin = True
+win = False
 
-while nowin:
+while win is False:
     get_guess()
     assess_guess(received)
-
-
-#print(received, number)
 
 restart()
 
