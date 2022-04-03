@@ -27,8 +27,7 @@ for x in range(len(people)):
 
     print(people[x])
 
-    numerics = ("one", "two", "three", "four")
-print(numerics)
+    numerics = ["one", "two", "three", "four"]
 
 for x in numerics:
     print(x)
@@ -37,3 +36,30 @@ i = 0
 while i < len(numerics):
     print(numerics[i])
     i += 1
+total_sounds = ""
+sounds = ["super", "cali", "fragil", "istic", "expi", "ali", "docious"]
+
+sounds.extend(["junty", "kop"])
+
+for x in sounds:
+    total_sounds += x
+
+print(total_sounds.upper())
+
+instructors = []
+
+instructors.extend(["Colt","Blue", "Lisa"])
+
+print(len(instructors))
+print(instructors)
+
+#instructors.clear()
+
+print(len(instructors))
+print(instructors)
+
+sounds.pop()
+print(sounds)
+
+instructors.remove("Colt")
+print(instructors)
