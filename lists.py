@@ -50,8 +50,8 @@ instructors = []
 
 instructors.extend(["Colt","Blue", "Lisa"])
 
-print(len(instructors))
-print(instructors)
+
+print(instructors.sort())
 
 #instructors.clear()
 
@@ -63,3 +63,7 @@ print(sounds)
 
 instructors.remove("Colt")
 print(instructors)
+instructors.reverse()
+print(instructors)
+
+print("-".join(["bu", "tane"]))
